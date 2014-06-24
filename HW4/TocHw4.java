@@ -22,139 +22,139 @@ public class TocHw4 {
 		for (int i = 0; i < jsonArray.length(); i++)
 		{    
             JSONObject jsonItem = jsonArray.getJSONObject(i);
-            String address = jsonItem.getString("¤g¦a°Ï¬q¦ì¸m©Î«Øª«°ÏªùµP");
+            String address = jsonItem.getString("åœŸåœ°å€æ®µä½ç½®æˆ–å»ºç‰©å€é–€ç‰Œ");
             Trade tmpT = new Trade();
             
-            if(address.indexOf("¸ô") != -1)
+            if(address.indexOf("è·¯") != -1)
             {
-            	String tmpS = address.substring(0, address.indexOf("¸ô")+1);
+            	String tmpS = address.substring(0, address.indexOf("è·¯")+1);
             	if(!info.containsKey(tmpS))
                 {
-            		tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		tmpT.minPrice = tmpT.maxPrice;
             		info.put(tmpS, tmpT);
                 	monthCount.put(tmpS, 0);
                 	List<Integer> tmpL = new LinkedList<Integer>();
-                	tmpL.add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+                	tmpL.add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
                 	distinct.put(tmpS, tmpL);
                 }
             	else
             	{	
-            		if(info.get(tmpS).maxPrice < jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).maxPrice < jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.maxPrice = info.get(tmpS).maxPrice;
-            		if(info.get(tmpS).minPrice > jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.minPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).minPrice > jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.minPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.minPrice = info.get(tmpS).minPrice;
             		info.put(tmpS, tmpT);
             		
-            		if(!distinct.get(tmpS).contains(jsonItem.getInt("¥æ©ö¦~¤ë")))
+            		if(!distinct.get(tmpS).contains(jsonItem.getInt("äº¤æ˜“å¹´æœˆ")))
             		{
-            			distinct.get(tmpS).add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+            			distinct.get(tmpS).add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
             			tmp = monthCount.get(tmpS);
             			tmp++;
             			monthCount.put(tmpS, tmp);
             		}
             	}
             }
-            else if(address.indexOf("µó") != -1)
+            else if(address.indexOf("è¡—") != -1)
             {
-            	String tmpS = address.substring(0, address.indexOf("µó")+1);
+            	String tmpS = address.substring(0, address.indexOf("è¡—")+1);
             	if(!info.containsKey(tmpS))
                 {
-            		tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		tmpT.minPrice = tmpT.maxPrice;
             		info.put(tmpS, tmpT);
                 	monthCount.put(tmpS, 0);
                 	List<Integer> tmpL = new LinkedList<Integer>();
-                	tmpL.add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+                	tmpL.add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
                 	distinct.put(tmpS, tmpL);
                 }
             	else
             	{	
-            		if(info.get(tmpS).maxPrice < jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).maxPrice < jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.maxPrice = info.get(tmpS).maxPrice;
-            		if(info.get(tmpS).minPrice > jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.minPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).minPrice > jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.minPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.minPrice = info.get(tmpS).minPrice;
             		info.put(tmpS, tmpT);
             		
-            		if(!distinct.get(tmpS).contains(jsonItem.getInt("¥æ©ö¦~¤ë")))
+            		if(!distinct.get(tmpS).contains(jsonItem.getInt("äº¤æ˜“å¹´æœˆ")))
             		{
-            			distinct.get(tmpS).add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+            			distinct.get(tmpS).add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
             			tmp = monthCount.get(tmpS);
             			tmp++;
             			monthCount.put(tmpS, tmp);
             		}
             	}
             }
-            else if(address.indexOf("«Ñ") != -1)
+            else if(address.indexOf("å··") != -1)
             {
-            	String tmpS = address.substring(0, address.indexOf("«Ñ")+1);
+            	String tmpS = address.substring(0, address.indexOf("å··")+1);
             	if(!info.containsKey(tmpS))
                 {
-            		tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		tmpT.minPrice = tmpT.maxPrice;
             		info.put(tmpS, tmpT);
                 	monthCount.put(tmpS, 0);
                 	List<Integer> tmpL = new LinkedList<Integer>();
-                	tmpL.add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+                	tmpL.add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
                 	distinct.put(tmpS, tmpL);
                 }
             	else
             	{	
-            		if(info.get(tmpS).maxPrice < jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).maxPrice < jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.maxPrice = info.get(tmpS).maxPrice;
-            		if(info.get(tmpS).minPrice > jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.minPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).minPrice > jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.minPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.minPrice = info.get(tmpS).minPrice;
             		info.put(tmpS, tmpT);
             		
-            		if(!distinct.get(tmpS).contains(jsonItem.getInt("¥æ©ö¦~¤ë")))
+            		if(!distinct.get(tmpS).contains(jsonItem.getInt("äº¤æ˜“å¹´æœˆ")))
             		{
-            			distinct.get(tmpS).add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+            			distinct.get(tmpS).add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
             			tmp = monthCount.get(tmpS);
             			tmp++;
             			monthCount.put(tmpS, tmp);
             		}
             	}
             }
-            else if(address.indexOf("¤j¹D") != -1)
+            else if(address.indexOf("å¤§é“") != -1)
             {
-            	String tmpS = address.substring(0, address.indexOf("¤j¹D")+2);
+            	String tmpS = address.substring(0, address.indexOf("å¤§é“")+2);
             	if(!info.containsKey(tmpS))
                 {
-            		tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		tmpT.minPrice = tmpT.maxPrice;
             		info.put(tmpS, tmpT);
                 	monthCount.put(tmpS, 0);
                 	List<Integer> tmpL = new LinkedList<Integer>();
-                	tmpL.add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+                	tmpL.add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
                 	distinct.put(tmpS, tmpL);
                 }
             	else
             	{	
-            		if(info.get(tmpS).maxPrice < jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.maxPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).maxPrice < jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.maxPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.maxPrice = info.get(tmpS).maxPrice;
-            		if(info.get(tmpS).minPrice > jsonItem.getInt("Á`»ù¤¸"))
-            			tmpT.minPrice = jsonItem.getInt("Á`»ù¤¸");
+            		if(info.get(tmpS).minPrice > jsonItem.getInt("ç¸½åƒ¹å…ƒ"))
+            			tmpT.minPrice = jsonItem.getInt("ç¸½åƒ¹å…ƒ");
             		else
             			tmpT.minPrice = info.get(tmpS).minPrice;
             		info.put(tmpS, tmpT);
             		
-            		if(!distinct.get(tmpS).contains(jsonItem.getInt("¥æ©ö¦~¤ë")))
+            		if(!distinct.get(tmpS).contains(jsonItem.getInt("äº¤æ˜“å¹´æœˆ")))
             		{
-            			distinct.get(tmpS).add(jsonItem.getInt("¥æ©ö¦~¤ë"));
+            			distinct.get(tmpS).add(jsonItem.getInt("äº¤æ˜“å¹´æœˆ"));
             			tmp = monthCount.get(tmpS);
             			tmp++;
             			monthCount.put(tmpS, tmp);
@@ -170,7 +170,7 @@ public class TocHw4 {
 		for (Object key : monthCount.keySet()) 
 		{
 			if(monthCount.get(key) == max)
-				System.out.println((String)key + ", ³Ì°ª¦¨¥æ»ù: " + info.get((String)key).maxPrice + ", ³Ì§C¦¨¥æ»ù: " + info.get((String)key).minPrice);
+				System.out.println((String)key + ", æœ€é«˜æˆäº¤åƒ¹: " + info.get((String)key).maxPrice + ", æœ€ä½æˆäº¤åƒ¹: " + info.get((String)key).minPrice);
 		}
     }
 	
